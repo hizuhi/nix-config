@@ -1,0 +1,122 @@
+@import "color.css";
+
+* {
+    font-family: 'Iosevka Nerd Font', 'Maple Mono SC NF';
+    font-size: 14px;
+    font-style: normal;
+    color: @onBackground;
+    border: none;
+	border-radius: 0px;
+	min-height: 0px;
+}
+
+window#waybar {
+  background-color: @background;
+  color: @onBackground;
+  box-shadow: 2px 2px @shadow;
+}
+
+tooltip {
+  background-color: @secondaryContainer;
+  color: @onSecondaryContainer;
+  border-radius: 8px;
+  border: 1px solid @outline;
+  padding: 10px;
+}
+
+tooltip label {
+  color: @onSecondaryContainer;
+  font-size: 14px;
+}
+
+#custom-dot {
+  font-size: 14px;
+  color: alpha(@tertiary, 0.8);
+  padding: 0px 5px;
+}
+
+#custom-dot-alt {
+  font-size: 14px;
+  color: alpha(@tertiary, 0.8);
+  padding: 0px 5px;
+}
+
+#workspaces {
+  margin: 5px 10px;
+  padding: 0px 10px;
+  border-radius: 99px;
+  font-style: normal;
+  font-weight: normal;
+  background-color: @surfaceContainer;
+  color: @onSurfaceContainer;
+}
+
+#workspaces button {
+	margin: 5px 0px;
+	border-radius: 99px;
+}
+
+#workspaces button {
+  padding: 0px 10px 0px 10px;
+  border-radius: 99px;
+  background-color: @surfaceDim;
+  color: @onSurfaceDim;
+}
+
+#workspaces button:hover {
+	background-color: @primary;
+	color: @onPrimary;
+}
+
+#workspaces button.empty {
+  background-color: transparent;
+  color: @onSufaceContainer;
+}
+
+#workspaces button.active {
+	padding: 0px 10px 0px 5px;
+	background-color: @primary;
+	color: @onPrimary;
+}
+
+#workspaces button.urgent {
+	background-color: @error;
+	color: @onError;
+}
+
+
+#cpu, 
+#memory,
+#clock, 
+#mpd, 
+#network, 
+#backlight, 
+#battery, 
+#custom-sysmenu, 
+#tray{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 5px 10px;
+  background-color: @surfaceContainer;
+  border-radius: 99px;
+}
+
+#pulseaudio{
+  padding-left: 25px;
+  padding-right: 15px;
+  margin: 5px 10px;
+  background-color: @surfaceContainer;
+  border-radius: 99px;
+}
+
+#tray {
+  padding: 10px 20px;
+  min-width: 20px;
+}
+
+#custom-logo {
+  background-color: @background;
+  color: @onBackground;
+  margin-left: 20px;
+  margin-right: 20px;
+}
