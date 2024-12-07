@@ -93,6 +93,7 @@ tooltip label {
 #backlight, 
 #battery, 
 #custom-sysmenu, 
+#power-profiles-daemon,
 #tray{
   padding-left: 15px;
   padding-right: 15px;
@@ -101,6 +102,7 @@ tooltip label {
   border-radius: 99px;
 }
 
+#bluetooth,
 #pulseaudio{
   padding-left: 25px;
   padding-right: 15px;

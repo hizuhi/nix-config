@@ -11,6 +11,8 @@
     environment.systemPackages = with pkgs; [
 	rofi-wayland
     dunst
+    qt5ct
+    gnome.gnome-tweaks
     wl-clipboard
     cliphist
     slurp

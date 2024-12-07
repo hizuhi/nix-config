@@ -19,7 +19,7 @@
   ];
 
   programs.git = {
-    userName = "szy";
+    userName = "hizuhi";
     userEmail = "sunzhiye8@gmail.com";
   };
 }

@@ -11,7 +11,7 @@
     settings = {
       mainBar = {
         # output = [ "eDP-1" ]; # Laptop screen only
-        height = 30;
+        height = 15;
         modules-center = [
           # "hyprland/window"
           "clock"
@@ -25,6 +25,7 @@
           "power-profiles-daemon"
           "pulseaudio"
           "network"
+          "bluetooth"
           "tray"
         ];
         "hyprland/workspaces" = {
@@ -119,6 +120,15 @@
             "on-scroll-up" = "shift_up";
             "on-scroll-down" = "shift_down";
           };
+        };
+        "bluetooth" = {
+          format = " {status}";
+          format-disabled = "";
+          format-connected = " {num_connections} connected";
+          tooltip-format = "{controller_alias}\t{controller_address}";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          on-click = "blueman-manager";
         };
       };
     };

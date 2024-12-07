@@ -26,6 +26,9 @@
     graphviz
     v2raya
 
+    # develop
+    cmake
+    gcc
 
     # IDE
     insomnia

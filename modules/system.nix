@@ -122,6 +122,7 @@
     wget
     curl
     git
+    connect
     sysstat
     lm_sensors # for `sensors` command
     # minimal screen capture tool, used by i3 blur lock to take a screenshot
@@ -135,6 +136,9 @@
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
   services.power-profiles-daemon = {
     enable = true;
   };
