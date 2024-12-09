@@ -29,18 +29,9 @@
     # develop
     cmake
     gcc
-
-    # IDE
-    insomnia
-
-    # cloud native
-    docker-compose
-    kubectl
-
-    # db related
-    dbeaver-bin
-    mycli
-    pgcli
+    
+    tree
+    telegram-desktop
   ];
 
   programs = {

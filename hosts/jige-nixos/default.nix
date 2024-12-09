@@ -34,15 +34,15 @@
     };
   };
 
-  fileSystems."/mnt/windows/d" = {
-    device = "/dev/nvme0n1p5";
-    fsType = "ntfs";
-  };
+  # fileSystems."/mnt/windows/d" = {
+  #   device = "/dev/nvme0n1p5";
+  #   fsType = "ntfs";
+  # };
 
-  fileSystems."/mnt/windows/c" = {
-    device = "/dev/nvme0n1p3";
-    fsType = "ntfs";
-  };
+  # fileSystems."/mnt/windows/c" = {
+  #   device = "/dev/nvme0n1p3";
+  #   fsType = "ntfs";
+  # };
   services.v2raya.enable = true; 
   programs.ssh.extraConfig = ''
     Host github.com

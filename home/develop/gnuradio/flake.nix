@@ -18,7 +18,7 @@
     in pkgs.mkShell {
       # create an environment with nodejs-18_x, pnpm, and yarn
       packages = with pkgs; [
-        (python3.withPackages (pythonPackages: with pythonPackages; [
+        (python3.withPackages (python-pkgs: with python-pkgs; [
         (pytorch.override { 
           python = python3; 
           version = pytorchVersion;
