@@ -7,7 +7,7 @@ let
 in
 {
   programs.kitty = {
-    enable = true;
+    enable = false;
     settings = {
       dynamic_background_opacity = true;
       enable_audio_bell = false;

@@ -12,8 +12,8 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main"; # WSL support
     
@@ -33,7 +33,10 @@
     nixosConfigurations = {
       jige-nixos = let
         username = "szy"; # another username for this machine
-        specialArgs = {inherit username inputs;};
+        specialArgs = {
+	  inherit username inputs;
+          enableDesktopApps = true;
+	};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
@@ -58,7 +61,10 @@
     nixosConfigurations = {
       wsl = let
         username = "szy";
-        specialArgs = {inherit username inputs;};
+        specialArgs = {
+	  inherit username inputs;
+          enableDesktopApps = false;
+	};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;

@@ -1,22 +1,20 @@
-{pkgs, ...}: {
-  ##################################################################################################################
-  #
-  # All Ryan's Home Manager Configuration
-  #
-  ##################################################################################################################
-
+{config, pkgs, enableDesktopApps, ...}:
+{
+  _module.args = {inherit enableDesktopApps;};
+  
   imports = [
     ../../home/core.nix
-
-    ../../home/fcitx5
-    ../../home/hyprland
+    ../../home/develop/gnuradio
     ../../home/programs
-    ../../home/rofi
     ../../home/shell
-    ../../home/vscode
     ../../home/emacs
-
-  ];
+  ]
+  ++[
+    ../../home/vscode
+    ../../home/hyprland
+    ../../home/rofi
+    ../../home/fcitx5
+  ]; 
 
   programs.git = {
     userName = "hizuhi";
