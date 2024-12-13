@@ -29,7 +29,8 @@
     # develop
     cmake
     gcc
-    
+    neovim-qt
+
     tree
     telegram-desktop
   ];

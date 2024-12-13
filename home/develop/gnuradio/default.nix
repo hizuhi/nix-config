@@ -19,4 +19,5 @@ in
   home.packages = [
     myGnuradio
   ];
+  home.file.".local/share/applications/gnuradio.desktop".source = ./gnuradio.desktop;
 }

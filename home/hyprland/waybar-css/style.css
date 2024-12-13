@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Iosevka Nerd Font', 'Maple Mono SC NF';
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     color: @onBackground;
     border: none;
@@ -26,17 +26,17 @@ tooltip {
 
 tooltip label {
   color: @onSecondaryContainer;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #custom-dot {
-  font-size: 14px;
+  font-size: 12px;
   color: alpha(@tertiary, 0.8);
   padding: 0px 5px;
 }
 
 #custom-dot-alt {
-  font-size: 14px;
+  font-size: 12px;
   color: alpha(@tertiary, 0.8);
   padding: 0px 5px;
 }
