@@ -20,6 +20,7 @@
   boot.loader = {
     grub = {
       enable = true;
+      default = "1";
       device = "nodev";
       efiSupport = true;
       extraEntries = ''
