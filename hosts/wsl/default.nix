@@ -4,7 +4,6 @@
     imports =
         [
             ../../modules/system.nix
-            ../../modules/hyprland.nix
         ];
 
     wsl.enable = true;

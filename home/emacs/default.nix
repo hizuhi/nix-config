@@ -1,12 +1,6 @@
-{pkgs, config, lib, ...}:let
-spacemacsSource = pkgs.fetchFromGitHub {
-  owner = "syl20bnr";
-  repo = "spacemacs";
-  rev = "61c3fbd5367fb52f58826dddb83453af99503d5f";
-  sha256 = "sha256-kmXyD50ysCANpnSAQS4ZkuKxC6k5ZZV64SSMa/6ltm0=";
-};
+{pkgs, config, lib, ...}:
 
-in{
+{
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
@@ -17,7 +11,7 @@ in{
     source = pkgs.fetchFromGitHub {
       owner = "syl20bnr";
       repo = "spacemacs";
-      rev = "61c3fbd5367fb52f58826dddb83453af99503d5f";
+      rev = "develop";
       sha256 = "sha256-kmXyD50ysCANpnSAQS4ZkuKxC6k5ZZV64SSMa/6ltm0=";
     };
   };

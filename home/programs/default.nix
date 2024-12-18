@@ -1,14 +1,20 @@
 {config, enableDesktopApps, ...}:
-
-{
-  imports = [
+let
+  baseList = [
     ./common.nix
     ./git.nix
     ./xdg.nix
     ./nvim.nix
-  ]
-  ++[
+  ];
+  
+  desktopList = [
     ./media.nix
     ./browsers.nix
   ];
+in
+{
+  imports = if enableDesktopApps then
+    baseList ++ desktopList
+  else
+    baseList;
 }

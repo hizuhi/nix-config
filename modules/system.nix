@@ -8,6 +8,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.fish.enable = true;
+
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -128,4 +129,8 @@
     sysstat
     neofetch
   ];
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
+  };
 }

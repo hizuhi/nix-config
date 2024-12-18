@@ -1,20 +1,27 @@
 {config, pkgs, enableDesktopApps, ...}:
-{
-  _module.args = {inherit enableDesktopApps;};
-  
-  imports = [
+let
+  baseList = [
     ../../home/core.nix
     ../../home/develop/gnuradio
     ../../home/programs
     ../../home/shell
     ../../home/emacs
-  ]
-  ++[
+  ];
+  
+  desktopList = [
     ../../home/vscode
     ../../home/hyprland
     ../../home/rofi
     ../../home/fcitx5
-  ]; 
+  ];
+in
+{
+  _module.args = {inherit enableDesktopApps;};
+
+  imports = if enableDesktopApps then
+  baseList ++ desktopList
+  else baseList; 
+  
 
   programs.git = {
     userName = "hizuhi";
