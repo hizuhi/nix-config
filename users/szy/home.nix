@@ -6,6 +6,7 @@ let
     ../../home/programs
     ../../home/shell
     ../../home/emacs
+    ../../home/nvim
   ];
   
   desktopList = [

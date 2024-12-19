@@ -16,7 +16,10 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main"; # WSL support
-    
+    myRepo = {
+      url = "github:hizuhi/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin-bat = {
       url = "github:catppuccin/bat";
       flake = false;
@@ -28,6 +31,7 @@
     nixpkgs,
     home-manager,
     nixos-wsl,
+    myRepo,
     ...
   }: {
     nixosConfigurations = {
@@ -43,7 +47,7 @@
           system = "x86_64-linux";
 
           modules = [
-            ./hosts/jige-nixos
+	    ./hosts/jige-nixos
             ./users/${username}/nixos.nix
 
             home-manager.nixosModules.home-manager
@@ -71,6 +75,14 @@
           system = "x86_64-linux";
 
           modules = [
+	     ({
+              nixpkgs.overlays = [
+                (final: prev: {
+                  myRepo = inputs.myRepo.packages."${prev.system}";
+                })
+              ];
+            })
+
             nixos-wsl.nixosModules.wsl
             ./hosts/wsl
             ./users/${username}/nixos.nix

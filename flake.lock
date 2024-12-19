@@ -71,6 +71,26 @@
         "type": "github"
       }
     },
+    "myRepo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1734511773,
+        "narHash": "sha256-wGsw/oDQkTKkKjYAtGstqJxoyPQUz/z8N4mjYRBJgeg=",
+        "owner": "hizuhi",
+        "repo": "nur-packages",
+        "rev": "b4ff11f5391e20d7ce68cd1ac30cda40a56b4724",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hizuhi",
+        "repo": "nur-packages",
+        "type": "github"
+      }
+    },
     "nixos-wsl": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -128,6 +148,7 @@
       "inputs": {
         "catppuccin-bat": "catppuccin-bat",
         "home-manager": "home-manager",
+        "myRepo": "myRepo",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_2"
       }
