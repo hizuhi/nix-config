@@ -30,7 +30,7 @@
     cmake
     gcc
     neovim-qt
-
+    gnumake
     tree
     telegram-desktop
   ];

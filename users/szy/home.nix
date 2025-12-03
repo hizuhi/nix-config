@@ -2,7 +2,7 @@
 let
   baseList = [
     ../../home/core.nix
-    ../../home/develop/gnuradio
+    ../../home/develop
     ../../home/programs
     ../../home/shell
     ../../home/emacs
