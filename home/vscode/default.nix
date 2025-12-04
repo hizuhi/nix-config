@@ -1,7 +1,7 @@
-{pkgs, config, ...}:
+{pkgs, config, enableDesktopApps, ...}:
 {
     programs.vscode = {
-        enable = true;
+        enable = enableDesktopApps;
         extensions = with pkgs.vscode-extensions; [
             github.copilot
             ms-python.python
@@ -13,6 +13,7 @@
             ms-vscode-remote.remote-ssh
             dracula-theme.theme-dracula
             jnoortheen.nix-ide
+            
         ];
     };
 }

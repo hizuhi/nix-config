@@ -7,10 +7,11 @@ let
     ../../home/shell
     ../../home/emacs
     ../../home/nvim
+    ../../home/vscode
+    ../../home/ai
   ];
   
   desktopList = [
-    ../../home/vscode
     ../../home/hyprland
     ../../home/rofi
     ../../home/fcitx5
