@@ -25,8 +25,8 @@ in
   else baseList; 
   
 
-  programs.git = {
-    userName = "hizuhi";
-    userEmail = "sunzhiye8@gmail.com";
+  programs.git.settings.user = {
+    name = "hizuhi";
+    email = "sunzhiye8@gmail.com";
   };
 }

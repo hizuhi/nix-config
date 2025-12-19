@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 let
 myPython = (pkgs.python311.withPackages (python311Packages: with python311Packages; [
-        pytorch
+        torch
         torchvision
         torchaudio
         numpy

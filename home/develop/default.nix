@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./gnuradio
-    ./python
+    # ./gnuradio
+    # ./python
   ];
 }

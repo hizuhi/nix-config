@@ -2,7 +2,7 @@
 let
 myGnuradio = pkgs.gnuradio.override {
   extraPythonPackages = with pkgs; [
-    python311Packages.pytorch
+    python311Packages.torch
     python311Packages.torchvision
     python311Packages.torchaudio
     python311Packages.numpy

@@ -80,10 +80,7 @@
       # normal fonts
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
-
-      # nerdfonts
-      (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
+      noto-fonts-color-emoji
     ];
 
     # use fonts specified by user rather than default ones
@@ -131,6 +128,6 @@
   ];
   programs.nix-ld = {
     enable = true;
-    package = pkgs.nix-ld-rs;
+    package = pkgs.nix-ld;
   };
 }

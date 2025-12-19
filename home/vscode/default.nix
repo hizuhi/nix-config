@@ -2,7 +2,7 @@
 {
     programs.vscode = {
         enable = enableDesktopApps;
-        extensions = with pkgs.vscode-extensions; [
+        profiles.default.extensions = with pkgs.vscode-extensions; [
             github.copilot
             ms-python.python
             ms-python.debugpy
@@ -13,7 +13,6 @@
             ms-vscode-remote.remote-ssh
             dracula-theme.theme-dracula
             jnoortheen.nix-ide
-            
         ];
     };
 }
