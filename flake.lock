@@ -131,7 +131,24 @@
         "home-manager": "home-manager",
         "myRepo": "myRepo",
         "nixos-wsl": "nixos-wsl",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "spacemacs": "spacemacs"
+      }
+    },
+    "spacemacs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767034774,
+        "narHash": "sha256-vD6mT0B9Wlx//KS4ZSgykhTrBdHkOYdj/6m5SJ8b17k=",
+        "owner": "syl20bnr",
+        "repo": "spacemacs",
+        "rev": "4d5fa081b59549082039561c52c875bee56e4ae0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "syl20bnr",
+        "repo": "spacemacs",
+        "type": "github"
       }
     }
   },

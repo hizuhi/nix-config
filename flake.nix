@@ -16,6 +16,11 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main"; # WSL support
+    # Spacemacs distribution as a flake input (content only)
+    spacemacs = {
+      url = "github:syl20bnr/spacemacs";
+      flake = false;
+    };
     myRepo = {
       url = "github:hizuhi/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -54,6 +59,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              # Ensure HM backs up pre-existing files instead of failing
+              home-manager.backupFileExtension = "hm-bak";
 
               home-manager.extraSpecialArgs = inputs // specialArgs;
               home-manager.users.${username} = import ./users/${username}/home.nix;
@@ -91,6 +98,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              # Ensure HM backs up pre-existing files instead of failing
+              home-manager.backupFileExtension = "hm-bak";
 
               home-manager.extraSpecialArgs = inputs // specialArgs;
               home-manager.users.${username} = import ./users/${username}/home.nix;

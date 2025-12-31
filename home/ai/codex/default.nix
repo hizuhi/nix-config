@@ -7,7 +7,7 @@
             model_provider = "fox";
             model_reasoning_effort = "high";
             disable_response_storage = true;
-            model_providers.fox = {
+            model_providers = {
                 fox = {
                     name = "fox";
                     base_url = "https://code.newcli.com/codex/v1";
